@@ -535,7 +535,7 @@ trait PrivateMatchMethods: TElement {
 
         let ref new_box_style = new_values.get_box();
         let has_new_animation_style = new_box_style.animation_name_count() >= 1 &&
-                                      new_box_style.animation_name_at(0).0.len() != 0;
+                                      new_box_style.animation_name_at(0).0 .0.len() != 0;
         let has_animations = self.has_css_animations(pseudo);
 
         let mut tasks = UpdateAnimationsTasks::empty();
